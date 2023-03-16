@@ -51,5 +51,7 @@ export class AccountserviceService {
     return this.http.get<Account>(`${this.apiUrl}/${id}`);
   }
   
-
+  test(){
+    
+  }
 }
