@@ -1,0 +1,133 @@
+.container{
+    margin:3em 0 0 0;
+    width: 100%;
+    font-family: 'poppins'
+}
+.col1-sm{
+    width: 60%;
+}
+
+.col1-sm .myAccLabel h1{
+    font-size: 3em;
+    font-family: 'poppins';
+} 
+
+.col2-sm{
+    width: 40%;
+}
+
+.data{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding:2em 0 2.7em 2em;
+    margin-top: 2em;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+}
+
+.data1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding:2em 0 2em 2em;
+    margin-top: 7.8em;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+    font-family: 'poppins'
+}
+
+.data2{
+    width: 100%;
+    height: auto;
+    display: block;
+    justify-content: start;
+    padding:2em 0 2em 2em;
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 2em;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+}
+
+.username, .province, .country{
+    width: 95%;
+}
+
+.firstName , .lastName, .email, .number, .barangay, .city{
+    width: 45%;
+    margin-right: 2em;
+}
+
+.data .username input, .data .email input, .data .number input{
+    margin-right:3em ;
+}
+
+.data .firstName, .data .lastName, .data .email,.data .number, .data .barangay, .data .city , .data .province , .data .country , .data .streetName, .data .houseNumber{
+    margin-top: 2em;
+  }
+  
+
+.data .firstName input, .data .lastName input{
+    margin-right:3em ;
+}
+
+.houseNumber{
+    width: 17%;
+    margin-right: 5em;
+
+}
+
+.streetName{
+    width: 45%;
+}
+
+.img{
+    width: 92%;
+    text-align: center;
+    margin-left: .7em;
+}
+
+.work{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    text-align: center;
+    padding-top: 3em;
+    align-items: center;
+}
+
+.work button{
+    font-family: 'poppins';
+}
+
+.work span{
+    font-size: 2em;
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+.skills{
+    width: 90%;
+    margin-left: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+   
+}
+
+ul{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    width: 45%;
+
+}
+
+
+
+

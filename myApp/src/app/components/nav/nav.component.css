@@ -1,0 +1,76 @@
+.container-fluid{
+  height: auto;
+  font-family: 'poppins';
+}
+
+.sidenav{
+box-shadow: 0 5px 20px rgb(0 0 0 / 0.3);
+height: 98vh;
+width: 94%;
+background-color: #29282e;
+padding-top: 20px;
+border-radius:2em 2em 2em 2em;
+margin-top: 1em;
+padding-left: 1em;
+padding-right: 1em;
+}
+
+.title{
+  font-size: 3em;
+}
+
+.content-container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 3em;
+  height: 93vh;
+}
+
+.control{
+  text-align: start;
+  font-size: 1em;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.logout{
+  font-size: 1em;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ea3270 !important ;
+  border-radius: .8em;  
+  margin-top:auto;
+  width: 100%;
+}
+
+.control:hover{
+  background-color: #5d60ef;
+  border-radius: .8em;
+}
+
+.controlActive{
+  text-align: start;
+  font-size: 1em;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1em;
+  background-color: #ea3270 !important;
+  border-radius: .8em;
+}
+
+.row1{
+
+}
+.row2{
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
