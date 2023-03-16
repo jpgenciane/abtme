@@ -50,4 +50,8 @@ export class AccountserviceService {
   getCurentAccountData(id:number):Observable<Account>{
     return this.http.get<Account>(`${this.apiUrl}/${id}`);
   }
+
+  test(){
+    
+  }
 }
