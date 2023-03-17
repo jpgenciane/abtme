@@ -52,6 +52,6 @@ export class AccountserviceService {
   }
   
   test(){
-    console.log();
+    console.log();gi
   }
 }
