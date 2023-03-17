@@ -1,0 +1,159 @@
+<div class="container">
+    <h1 class="title">Sign up</h1>
+    <form [formGroup]="form" (ngSubmit)="signup()">
+        
+        <div class="address"><h1>Basic Information</h1></div>
+        <div class="form-group username">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" formControlName="username"  name="username" placeholder="Username" [ngClass]="{'is-valid': submitted && form.controls.username.errors }"  [(ngModel)]="username"  >
+            <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                <div *ngIf="submitted && form.controls.username.errors.required">
+                    username is required
+                </div>
+            </div>
+        </div>
+           
+
+        <div class="form-group password">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" formControlName="password"  placeholder="Password" name="password" [(ngModel)]="password" [ngClass]="{'is-valid': submitted && form.controls.password.errors }" >
+            <div *ngIf="submitted && form.controls.password.errors" class="text-danger"  >
+                <div *ngIf="submitted && form.controls.password.errors.required">
+                    password is required
+                </div>
+            </div>
+        </div>   
+           
+        
+        <div class="form-group firstName">
+            <label for="exampleInputEmail1">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName"  name="firstName" placeholder="FirstName" [ngClass]="{'is-valid': submitted && form.controls.firstName.errors}"  [(ngModel)]="firstName"  >
+            <div *ngIf="submitted && form.controls.firstName.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.firstName.errors.required">
+                    First Name is required
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="form-group lastName">
+            <label for="exampleInputEmail1">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName"  name="lastName" placeholder="lastName" [ngClass]="{'is-valid': submitted && form.controls.lastName.errors }"  [(ngModel)]="lastName"  >
+            <div *ngIf="submitted && form.controls.lastName.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.lastName.errors.required">
+                    Last Name is required
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="form-group email">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" formControlName="email"  name="email" placeholder="email" [ngClass]="{'is-valid': submitted && form.controls.email.errors }"  [(ngModel)]="email"  >
+            <div *ngIf="submitted && form.controls.email.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.email.errors.required">
+                    Email is required
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="form-group number">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="text" class="form-control" formControlName="number"  name="email" placeholder="number" [ngClass]="{'is-valid': submitted && form.controls.number.errors }"  [(ngModel)]="number"  >
+            <div *ngIf="submitted && form.controls.number.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.number.errors.required">
+                    Number is required
+                </div>
+            </div>
+        </div>
+
+        <div class="address"><h1>Skill</h1></div>
+        <div class="form-group skill">
+            <label for="exampleInputEmail1">Skill <span style="opacity: .5;">*seperate by comma(,)</span></label>
+            <input type="text" class="form-control" formControlName="skills"  name="skills" placeholder="skills" [ngClass]="{'is-valid': submitted && form.controls.skills.errors }"  [(ngModel)]="skills"  >
+            <div *ngIf="submitted && form.controls.skills.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.skills.errors.required">
+                   Skills are required
+                </div>
+            </div>
+        </div>
+     
+        
+       
+        <div class="address"><h1>Address</h1></div>
+        <div class="form-group houseNumber">
+            <label for="exampleInputEmail1">House Number</label>
+            <input type="text" class="form-control" formControlName="houseNumber"  name="houseNumber" placeholder="house#" [ngClass]="{'is-valid': submitted && form.controls.houseNumber.errors }"  [(ngModel)]="houseNumber"  >
+            <div *ngIf="submitted && form.controls.houseNumber.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.houseNumber.errors.required">
+                    house Number is required
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="form-group streetName">
+            <label for="exampleInputEmail1">Street and Subdivision</label>
+            <input type="text" class="form-control" formControlName="streetName"  name="street" placeholder="Street and Subdivision" [ngClass]="{'is-valid': submitted && form.controls.streetName.errors }"  [(ngModel)]="streetName"  >
+            <div *ngIf="submitted && form.controls.streetName.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.streetName.errors.required">
+                    Street Name is required
+                </div>
+            </div>
+        </div>
+      
+
+        <div class="form-group subBarName">
+            <label for="exampleInputEmail1">Barangay Name</label>
+            <input type="text" class="form-control" formControlName="subBarName"  name="subBarName" placeholder="subBarName" [ngClass]="{'is-valid': submitted && form.controls.subBarName.errors }"  [(ngModel)]="subBarName"  >
+            <div *ngIf="submitted && form.controls.subBarName.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.subBarName.errors.required">
+                    Barangay is required
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="form-group city">
+            <label for="exampleInputEmail1">City</label>
+            <input type="text" class="form-control" formControlName="city"  name="city" placeholder="city" [ngClass]="{'is-valid': submitted && form.controls.city.errors }"  [(ngModel)]="city"  >
+            <div *ngIf="submitted && form.controls.city.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.city.errors.required">
+                    City is required
+                </div>
+            </div>
+        </div>
+       
+
+        <div class="form-group  province">
+            <label for="exampleInputEmail1">Province</label>
+            <input type="text" class="form-control" formControlName="province"  name="province" placeholder="province" [ngClass]="{'is-valid': submitted && form.controls.province.errors }"  [(ngModel)]="province"  >
+            <div *ngIf="submitted && form.controls.province.errors" class="text-danger">
+                <div *ngIf="submitted && form.controls.province.errors.required">
+                    Province is required
+                </div>
+            </div>
+        </div>
+       
+
+        <div class="form-group country">
+            <label for="exampleInputEmail1">Country</label>
+            <input type="text" class="form-control" formControlName="country"  name="country" placeholder="country" [ngClass]="{'is-valid': submitted && form.controls.country.errors }"  [(ngModel)]="country"  >
+            <div *ngIf="submitted && form.controls.country.errors" class="text-danger" >
+                <div *ngIf="submitted && form.controls.country.errors.required">
+                    Country is required
+                </div>
+            </div>
+        </div>
+       
+        
+        
+        <div class="button"><button type="submit" class="btn btn-primary" >Submit</button></div>
+        
+    </form>
+    
+
+    
+    
+</div>

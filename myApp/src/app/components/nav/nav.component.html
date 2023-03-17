@@ -1,0 +1,60 @@
+<div class="container-fluid ">
+    <div class="sidenav" >
+        <div class="content-container" >
+           <div class="row1">
+                <div class="title" style="color: white; text-align: center;">
+                    <img [src]="'assets/img/me.png'" style="width: 50px; height: 50px;" alt="">
+                    <span style="color: #ff7d97">ABT</span><span style="color: #80b6ff">ME.</span>
+                </div>
+    
+                <hr style="color: white; margin-top: 2em; margin-bottom: 2em;">
+           
+                <div class="control" >
+                    <img [src]="'assets/img/dashboard.svg'" style="width: 35px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
+                    <span style="color: white">Dashboard</span>
+                </div>
+        
+                <div class="control" [ngClass]="{'controlActive': showProfile}"  (click)="showProfileAction()">
+                    <img [src]="'assets/img/myprofile.svg'" style="width: 35px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
+                    <span style="color: white">My Account</span>
+                </div>
+        
+                <div class="control">
+                    <img [src]="'assets/img/calculator.svg'" style="width: 32px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
+                    <span style="color: white">Expense Calculator</span>
+                </div>
+        
+                <div class="control">
+                    <img [src]="'assets/img/priority.svg'" style="width: 35px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
+                    <span style="color: white">Priorities</span>
+                </div>
+                
+                <div class="control">
+                    <img [src]="'assets/img/product.svg'" style="width: 35px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
+                    <span style="color: white">Products</span>
+                </div>
+        
+                <div class="control">
+                    <img [src]="'assets/img/data.svg'" style="width: 35px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
+                    <span style="color: white">Datasheet</span>
+                </div>
+        
+                <div class="control">
+                    <img [src]="'assets/img/report.svg'" style="width: 35px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
+                    <span style="color: white">Report</span>
+                </div>
+           </div>
+           
+           <div class="row2">
+                <div class="log">
+                    <div class="logout" (click)="logout()">
+                        <span style="color: white">Logout</span>
+                    </div>
+                </div>
+           </div>
+
+        </div>
+        
+    </div>
+
+</div>

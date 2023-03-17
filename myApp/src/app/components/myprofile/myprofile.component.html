@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="row">
+        <div class="col1-sm">
+            <div class="myAccLabel">
+                <h1>My Account</h1>
+                <span>One person's data is another person's noise.</span>
+            </div>
+            
+            <div class="container data-container">
+                <div class="col data">
+                    <h1 style="margin-bottom:1em;">Basic Information</h1>
+                   
+                    <div class="username">
+                        <label><strong>Username</strong></label>
+                        <input type="disabled" class="form-control" value=@{{data}}  readonly="readonly" >
+                    </div>
+
+                    <div class="firstName">
+                        <label><strong>First Name:</strong></label>
+                        <input type="text" class="form-control" value={{account.firstName}}  readonly="readonly" >
+                    </div>
+                    <div class="lastName">
+                        <label><strong>Last Name:</strong></label>
+                        <input type="disabled" class="form-control" value={{account.lastName}}  readonly="readonly" >
+                    </div>
+
+                    <div class="email">
+                        <label><strong>Email:</strong></label>
+                        <input type="disabled" class="form-control" value={{account.email}}  readonly="readonly" >
+                    </div>
+
+                    <div class="number">
+                        <label><strong>Number:</strong></label>
+                        <input type="disabled" class="form-control" value={{account.number}}  readonly="readonly" >
+                    </div>
+                    <h1 style="margin-top: 1em; margin-bottom: 0; width: 100%;">Address</h1>
+
+                    <div class="houseNumber">
+                        <label><strong>House Number:</strong></label>
+                        <input type="disabled" class="form-control" value={{account.address.houseNumber}}  readonly="readonly" >
+                    </div>
+
+                    <div class="streetName">
+                        <label><strong>Street and Subdivision</strong></label>
+                        <input type="disabled" class="form-control" value={{account.address.streetName}}  readonly="readonly" >
+                    </div>
+
+                    <div class="barangay">
+                        <label><strong>Barangay:</strong></label>
+                        <input type="disabled" class="form-control" value={{account.address.subdivisionBarangay}}  readonly="readonly" >
+                    </div>
+
+                    <div class="city">
+                        <label><strong>City:</strong></label>
+                        <input type="disabled" class="form-control" value={{account.address.city}}  readonly="readonly" >
+                    </div>
+
+                    <div class="province">
+                        <label><strong>Province:</strong></label>
+                        <input type="disabled" class="form-control" value={{account.address.province}}  readonly="readonly" >
+                    </div>
+
+                    <div class="country">
+                        <label><strong>Country:</strong></label>
+                        <input type="disabled" class="form-control" value={{account.address.country}}  readonly="readonly" >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+      
+        <div class="col2-sm">
+            
+            <div class="container data-container">
+                
+                <div class="col data1">
+                    
+                    <h1 style="width: 100%;">About Me</h1>
+                    <div class="img">
+                       <img [src]="'assets/img/doge.webp'" style="width: 80%; height: 100%; border-radius: 15px; " alt="">
+                    </div>
+
+                    <div class="work">
+                        <span >{{account.firstName}} {{account.lastName}}</span>
+                        <h3 style="margin-top: 10px; font-family: 'poppins';" >Developer</h3>
+                        <button type="button" class="btn btn-warning" style="width: 40%; ">Edit Profile</button>
+                    </div>
+
+                </div>
+
+                <div class="col data2">
+                   
+                    <h1>Skills</h1>
+                    <div class="skills">
+                        <ul *ngFor="let person of nameArr;" class="list-group">
+                            <li class="list-group-item">{{person}}</li>
+                        </ul>
+                        <div *ngIf="nameArr == null" class="none" style="display: flex; flex-wrap: wrap; justify-content: center; width: 100%;  ">
+                            <img style="width:60%; height: 90%; "[src]="'assets/img/none.gif'" alt="">
+                            <div >
+                                <span style="font-family: 'poppins';" ><strong > User don't have skills yet</strong></span>   
+                           
+                            </div>
+
+                        </div>
+                       
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

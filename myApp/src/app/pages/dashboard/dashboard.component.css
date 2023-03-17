@@ -1,0 +1,24 @@
+.alertoff{
+    display: none !important;
+}
+
+.body{
+    min-width: 30%;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #eff3f4;
+    padding-bottom: 3em;
+}
+
+.nav1{
+    padding-left: 1em;
+    width: 18%;
+   
+}
+
+.content-body{
+    padding-left: 4em;
+    width: 82%; 
+}

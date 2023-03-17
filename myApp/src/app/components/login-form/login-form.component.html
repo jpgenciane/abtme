@@ -1,0 +1,42 @@
+    <div class="container">
+        <form [formGroup]="form" (ngSubmit)="sendData()">
+            <h1 class="title">Login</h1>
+            <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="text" class="form-control" formControlName="username"  name="username" placeholder="Username" [ngClass]="{'is-valid': submitted && form.controls.username.errors }"  [(ngModel)]="username"  >
+            </div>
+            <div *ngIf="submitted && form.controls.username.errors" class="text-danger" style="margin-top: -.8em;">
+                <div *ngIf="submitted && form.controls.username.errors.required">
+                    username is required
+                </div>
+            </div>
+            <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" formControlName="password"  placeholder="Password" name="password" [(ngModel)]="password" [ngClass]="{'is-valid': submitted && form.controls.password.errors }" >
+            </div>
+            <div *ngIf="submitted && form.controls.password.errors" class="text-danger"  style="margin-top: -1em;">
+                <div *ngIf="submitted && form.controls.password.errors.required">
+                    password is required
+                </div>
+            </div>
+            <p class="fpassword" style="text-align: end; font-size: .8em;">Forgot Password?</p>
+            <button type="submit" class="btn btn-primary" >Submit</button>
+           
+            <div class="extra">
+                <p>Or signup with<p>
+                <div class="icons"> 
+                    <a href=""><img [src]="'assets/img/fb.svg'" alt=""></a>
+                    <a href=""><img [src]="'assets/img/twitter.svg'" alt=""></a>
+                    <a href=""><img [src]="'assets/img/insta.svg'" alt=""></a></div>
+            </div>
+
+            <div class="signup">
+                <p>Dont have an Account yet ?</p>
+                <a routerLink="/signup" href="">SIGN UP</a>
+            </div>
+        </form>
+        
+
+        
+        
+    </div>

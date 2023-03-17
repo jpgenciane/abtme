@@ -1,0 +1,39 @@
+{
+  "account": [
+    {
+      "username": "jpgenciane",
+      "password": "password",
+      "firstName": "John Paul",
+      "lastName": "Genciane",
+      "email": "jpgenciane@gmail.com",
+      "number": "09358677081",
+      "address": {
+        "houseNumber": "106",
+        "streetName": "Mabiyaya St. Masagana Homes",
+        "subdivisionBarangay": "Sta Rita",
+        "city": "Guiguinto",
+        "province": "Bulacan",
+        "country": "Philippines"
+      },
+      "id": 1
+    },
+    {
+      "username": "jpgenciane1",
+      "password": "password",
+      "firstName": "John Paul",
+      "lastName": "Genciane",
+      "email": "jpgenciane@gmail.com",
+      "number": "09358677081",
+      "skill": "Angular, React, Java, Csharp, Html, CSS",
+      "address": {
+        "houseNumber": "106",
+        "streetName": "Masagana Homes",
+        "subdivisionBarangay": " Sta Rita",
+        "city": " Guiguinto ",
+        "province": "Bulacan",
+        "country": "Philippines"
+      },
+      "id": 2
+    }
+  ]
+}
