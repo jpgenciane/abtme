@@ -5,7 +5,7 @@
 .body{
     min-width: 30%;
     width: auto;
-    height: auto;
+
     display: flex;
     flex-direction: row;
     background-color: #eff3f4;
@@ -15,12 +15,14 @@
 .nav1{
     padding-left: 1em;
     width: 18%;
+    height: auto;
    
 }
 
 .content-body{
     padding-left: 4em;
     width: 82%; 
+    height: auto;
 
 }
 
