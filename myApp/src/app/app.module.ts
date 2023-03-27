@@ -26,6 +26,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { MyprofileComponent } from './components/myprofile/myprofile.component';
 import { PrioritiesComponent } from './components/priorities/priorities.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { MyexpenseComponent } from './components/myexpense/myexpense.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
     NavComponent,
     MyprofileComponent,
     PrioritiesComponent,
-    DialogComponent
+    DialogComponent,
+    MyexpenseComponent
   ],
   imports: [
     BrowserModule,
