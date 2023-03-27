@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Priority } from 'src/app/account';
 import { PriorityserviceService } from 'src/app/service/priorityservice.service';
 import { DialogComponent } from '../dialog/dialog.component';
+import Swal from 'sweetalert2';
 
 interface Status {
   value: string;
@@ -54,15 +55,34 @@ export class PrioritiesComponent implements OnInit{
   }
 
   delete(priority:Priority){
-    this.service.delete(priority).subscribe();
-    alert("Priority: "+ priority.priorityName+ " is Deleted")
-    this.getAllPriority();
-    this.condition=false;
-    
+    this.deleteAlertConfirmation(priority);
   }
 
   edit(){
     console.log("hello");
+  }
+
+
+  deleteAlertConfirmation(priority:Priority) {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'This process will delete '+ this.showPriority.priorityName,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, go ahead.',
+      cancelButtonText: 'No, let me think',
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire('Removed!', 'Product removed successfully.', 'success');
+        this.service
+        .delete(priority)
+        .subscribe();
+        this.condition=false;
+        this.getAllPriority();
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelled', 'Product still in our database.', 'error');
+      }
+    });
   }
 
 }
