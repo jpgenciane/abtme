@@ -32,15 +32,15 @@
 }
 
 mat-tab-group{
-    margin-top: 1.5em;
     border-radius: 15px;
     padding:1em;
-    height: 80%;
+    height: 90%;
     width: 90%;
     background-color: white;
     margin-right: 3em;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.3); 
     overflow: auto;
+    margin-bottom: 10px;
 }
 
 .color-legend-container{
