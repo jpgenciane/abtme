@@ -23,6 +23,8 @@ export interface Priority{
     priorityName:string;
     priorityLevel:string;
     priorityStatus:string;
-    dueDate:string;   
+    dueDate:string;  
+    priorityDesc:string;
+    color:string; 
 }
 

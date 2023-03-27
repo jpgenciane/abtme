@@ -17,6 +17,9 @@ export class PriorityserviceService {
     return this.http.post<Priority>(this.apiUrl,priority);
   }
 
+  getAllPriority():Observable<Priority[]>{
+    return this.http.get<Priority[]>(this.apiUrl);
+  }
 
 
 }

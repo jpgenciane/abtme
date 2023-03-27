@@ -38,27 +38,49 @@
   ],
   "priority": [
     {
-      "id": 1,
-      "priorityName": "test1",
-      "priorityLevel": "asd",
-      "priorityStatus": "done",
-      "dueDate": "now"
-    },
-    {
-      "priorityName": "test4",
-      "priorityLevel": "high",
-      "priorityStatus": "done",
-      "priorityDesc": "wdqwdq",
-      "dueDate": "2023-03-17T16:00:00.000Z",
-      "id": 2
-    },
-    {
-      "priorityName": "test1",
+      "priorityName": "asd",
       "priorityLevel": "normal",
+      "priorityStatus": "done",
+      "priorityDesc": "asd",
+      "dueDate": "2023-04-27T16:00:00.000Z",
+      "color": "#7ddc20",
+      "id": 9
+    },
+    {
+      "priorityName": "Matulog Lang",
+      "priorityLevel": "critical",
+      "priorityStatus": "not started",
+      "priorityDesc": "Sleeeppyy",
+      "dueDate": "2023-04-26T16:00:00.000Z",
+      "color": "#ff2500",
+      "id": 10
+    },
+    {
+      "priorityName": "Testing One",
+      "priorityLevel": "high",
+      "priorityStatus": "not started",
+      "priorityDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "dueDate": "2023-04-28T16:00:00.000Z",
+      "color": "#ffa500",
+      "id": 11
+    },
+    {
+      "priorityName": "Mag Code",
+      "priorityLevel": "normal",
+      "priorityStatus": "not started",
+      "priorityDesc": "The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.",
+      "dueDate": "2023-04-27T16:00:00.000Z",
+      "color": "#7ddc20",
+      "id": 12
+    },
+    {
+      "priorityName": "Color test",
+      "priorityLevel": "high",
       "priorityStatus": "in progress",
-      "priorityDesc": "jkjhk",
-      "dueDate": "2023-03-22T16:00:00.000Z",
-      "id": 3
+      "priorityDesc": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”",
+      "dueDate": "2023-04-29T16:00:00.000Z",
+      "color": "#ffa500",
+      "id": 13
     }
   ]
 }

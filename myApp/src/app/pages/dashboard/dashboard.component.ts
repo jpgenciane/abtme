@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit,ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbAlertConfig, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-import { interval, timeout, timer } from 'rxjs';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,8 +11,8 @@ export class DashboardComponent implements OnInit {
   username = localStorage.getItem('sessionUsername');
   id = JSON.parse(localStorage.getItem('id') || '{}');
   Profile:Boolean=false;
-  Priorities:Boolean=false;
-  Expense:Boolean=true;
+  Priorities:Boolean=true;
+  Expense:Boolean=false;
   display:boolean=true;
   constructor(alertConfig: NgbAlertConfig, private router:Router){
     alertConfig.type = 'success';

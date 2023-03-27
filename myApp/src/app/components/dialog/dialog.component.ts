@@ -27,6 +27,7 @@ export class DialogComponent implements OnInit {
   priorityDesc:string;
   dueDate:string;
   priorityName: any;
+  color:string;
   
   constructor(private formBuilder : FormBuilder,private service:PriorityserviceService){}
 
@@ -56,15 +57,44 @@ export class DialogComponent implements OnInit {
   ];
 
   sendData(){
+    if(this.priorityLevel==="low"){
+      this.color="#b1ea78"
+      console.log("pumasok sa low")
+    }
+    if(this.priorityLevel==="normal"){
+      this.color="#7ddc20"
+      console.log("pumasok sa Normal")
+    }
+    if(this.priorityLevel==="high"){
+      this.color="#ffa500"
+      console.log("pumasok sa High")
+    }
+    if(this.priorityLevel==="critical"){
+      this.color="#ff2500"
+      console.log("pumasok sa Critical")
+    }
     const data={
       priorityName: this.priorityName,
       priorityLevel: this.priorityLevel,
       priorityStatus: this.priorityStatus,
       priorityDesc: this.priorityDesc,
-      dueDate: this.dueDate
+      dueDate: this.dueDate,
+      color:this.color
+  
+
     }
     this.service.addPriority(data).subscribe();
     window.location.reload();
     
+  }
+
+  dateToday(): Date {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    return new Date(year, month, day, hour, minute);
   }
 }

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
       <div class="col1-sm">
-        <div class="row1">
+        <div class="priority-row1">
             <div class="title-header">
                 <h1>Priorities</h1>
                 <span>You must know the difference between what is urgent and what is important.</span> 
@@ -11,9 +11,19 @@
                 </div>
                 <div class="priority-container">
                     <mat-tab-group [disableRipple]="true">
-                        <mat-tab class="asd" label="Active">
-                            <div class="active-priority">
-                                
+                        <mat-tab class="my-custom-class" label="Active" >
+                            <div class="active-priority"  *ngFor="let item of priority" >
+                                <div class="priority-div "  (click)="priorityAction(item)">
+                                  <div class="priority-col1">
+                                    <div class="risk-color" style="background-color: {{item.color}};"></div>
+                                  </div>
+                                  <div class="priority-name-container">
+                                    <div class="priority-name">{{item.priorityName}}</div>
+                                  </div>
+                                  <div class="status-container">
+                                    <div class="status">{{item.priorityStatus}}</div>
+                                  </div>
+                                </div>
                             </div>
                         </mat-tab>
                         <mat-tab label="Done"> Content 2 </mat-tab>
@@ -22,14 +32,65 @@
         </div>
 
         <div class="row2">
-           <!-- row 2 -->
+          <div class="priority-row2">
+            <div class="priority-details-container">
+              <ng-container *ngIf="condition">
+                  <img [src]="'assets/img/priority.png'" style="width:75px ; height:50px ; margin-right: 10px;" alt="">
+                  <div class="priorityName-container">
+                  <div class="priorityName">{{showPriority.priorityName}}</div>
+                </div>
+                <div class="priorityLevel-container">
+                  <label for="" style="width: 100%; height: auto; display:flex; align-items: end;">Priority Level</label>
+                  <div class="priorityLevel" >{{showPriority.priorityLevel}}</div>
+                  <div class="priorityColor-container" style="background-color: {{showPriority.color}};">
+                    <div class="priorityColor" ></div>
+                  </div> 
+                </div>
+            
+                <div class="priorityStatus-container">
+                  <div class="form-group priority-status">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Status- {{showPriority.priorityStatus}}</mat-label>
+                        <mat-select formControlName="priorityStatus" [(ngModel)]="priorityStatus">
+                          <mat-option *ngFor="let status of status" [value]="status.value"  >
+                            <div class="pick">
+                                <div> {{status.viewValue}}</div>
+                              </div>
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                        <div *ngIf="submitted && form.controls.username.errors.required">
+                            username is required
+                        </div>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="priorirtyDueDate-container">
+                  <label for="">Priority Due Date</label>
+                  <div class="priorityDueDate"> {{showPriority.dueDate |  date:'fullDate'}}</div>
+                </div>
+                <div class="priorityDesc-container">
+                  <label for="">Priority Description</label>
+                  <div class="priorityDesc">{{showPriority.priorityDesc}}</div>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="!condition">
+             <div class="noData">
+              <img [src]="'assets/img/robt.gif'" style="width: 80%; height: 80% ;" alt="">
+              <h1>Click Priority to see details.</h1>
+             </div>
+            </ng-container>
+          </div>
+          </div>
         </div>
         
       </div>
 
       <div class="col2-sm">
         <!-- // col 2 -->
-        <div class="part-container">
+        <!-- <div class="part-container">
             <div class="color-legend">
                 <h1>Color Legend</h1>
                 <div class="legend">
@@ -39,7 +100,7 @@
                     <div class="critical"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
       </div>
     </div>
