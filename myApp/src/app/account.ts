@@ -17,3 +17,12 @@ export interface Account{
     };
    
 }
+
+export interface Priority{
+    id?:number;
+    priorityName:string;
+    priorityLevel:string;
+    priorityStatus:string;
+    dueDate:string;   
+}
+

@@ -1,7 +1,9 @@
 .container{
     margin:3em 0 0 0;
     width: 100%;
-    font-family: 'poppins'
+    font-family: 'poppins';
+  
+    
 }
 .col1-sm{
     width: 60%;

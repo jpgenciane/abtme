@@ -1,0 +1,80 @@
+<h1 mat-dialog-title>Add Priority</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="form" (ngSubmit)="sendData()"> 
+      
+                <div class="form-group priority">
+                    <label for="exampleInputEmail1">Priority Name</label>
+                    <input type="text" class="form-control" formControlName="priorityName"  name="name" placeholder="Priority Name" [ngClass]="{'is-valid': submitted && form.controls.username.errors }"  [(ngModel)]="priorityName"  >
+                    <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                        <div *ngIf="submitted && form.controls.username.errors.required">
+                            username is required
+                        </div>
+                    </div> -->
+                </div>
+
+            
+                <div class="form-group priority-level">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Priority Level</mat-label>
+                        <mat-select formControlName="priorityLevel" [(ngModel)]="priorityLevel">
+                          <mat-option *ngFor="let risk of risk" [value]="risk.value">
+                            <div class="pick">
+                                <div style="background-color:{{risk.color}}; width: 3em; margin-right:5px; border-radius: 15px;"></div>
+                                {{risk.viewValue}}</div>
+                                
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      
+                    <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                        <div *ngIf="submitted && form.controls.username.errors.required">
+                            username is required
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="form-group priority-status">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Status</mat-label>
+                        <mat-select formControlName="priorityStatus" [(ngModel)]="priorityStatus">
+                          <mat-option *ngFor="let status of status" [value]="status.value" >
+                            <div class="pick">
+                                <div> {{status.viewValue}}</div>
+                               </div>
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                        <div *ngIf="submitted && form.controls.username.errors.required">
+                            username is required
+                        </div>
+                    </div> -->
+                </div>
+                
+
+                <div class="form-group due">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="dueDate" [(ngModel)]="dueDate">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker">
+                          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+                
+                <div class="form-group description">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Description {{priorityLevel}}  {{priorityStatus}} {{priorityDesc}} {{dueDate}}</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="priorityDesc" [(ngModel)]="priorityDesc"></textarea>
+                      </div>
+                </div>
+        
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

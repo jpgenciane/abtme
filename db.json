@@ -35,5 +35,30 @@
       },
       "id": 2
     }
+  ],
+  "priority": [
+    {
+      "id": 1,
+      "priorityName": "test1",
+      "priorityLevel": "asd",
+      "priorityStatus": "done",
+      "dueDate": "now"
+    },
+    {
+      "priorityName": "test4",
+      "priorityLevel": "high",
+      "priorityStatus": "done",
+      "priorityDesc": "wdqwdq",
+      "dueDate": "2023-03-17T16:00:00.000Z",
+      "id": 2
+    },
+    {
+      "priorityName": "test1",
+      "priorityLevel": "normal",
+      "priorityStatus": "in progress",
+      "priorityDesc": "jkjhk",
+      "dueDate": "2023-03-22T16:00:00.000Z",
+      "id": 3
+    }
   ]
 }
