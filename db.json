@@ -38,15 +38,6 @@
   ],
   "priority": [
     {
-      "priorityName": "asd",
-      "priorityLevel": "normal",
-      "priorityStatus": "done",
-      "priorityDesc": "asd",
-      "dueDate": "2023-04-27T16:00:00.000Z",
-      "color": "#7ddc20",
-      "id": 9
-    },
-    {
       "priorityName": "Matulog Lang",
       "priorityLevel": "critical",
       "priorityStatus": "not started",

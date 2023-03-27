@@ -53,5 +53,17 @@ export class PrioritiesComponent implements OnInit{
     this.condition=true;
   }
 
+  delete(priority:Priority){
+    this.service.delete(priority).subscribe();
+    alert("Priority: "+ priority.priorityName+ " is Deleted")
+    this.getAllPriority();
+    this.condition=false;
+    
+  }
+
+  edit(){
+    console.log("hello");
+  }
+
 }
 

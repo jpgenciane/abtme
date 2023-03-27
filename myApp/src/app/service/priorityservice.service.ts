@@ -22,4 +22,9 @@ export class PriorityserviceService {
   }
 
 
+
+  delete(priority:Priority):Observable<Priority>{
+    const url = `${this.apiUrl}/${priority.id}`;
+    return this.http.delete<Priority>(url)
+  }
 }
