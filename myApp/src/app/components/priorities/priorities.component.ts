@@ -5,7 +5,6 @@ import { PriorityserviceService } from 'src/app/service/priorityservice.service'
 import { DialogComponent } from '../dialog/dialog.component';
 import Swal from 'sweetalert2';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 interface Status {
   value: string;
@@ -39,7 +38,7 @@ export class PrioritiesComponent implements OnInit{
   notStarted:Priority[];
   userPriority:Priority[]=[];
   done:boolean=true;
-  faCoffee =faGithub;
+
   ngOnInit(): void {
    this.getUserPriority();
    this.getAllActive();

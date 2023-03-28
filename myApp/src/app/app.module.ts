@@ -27,7 +27,7 @@ import { MyprofileComponent } from './components/myprofile/myprofile.component';
 import { PrioritiesComponent } from './components/priorities/priorities.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MyexpenseComponent } from './components/myexpense/myexpense.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 @NgModule({
@@ -61,8 +61,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    FontAwesomeModule,
-    
+
   ],  
   providers: [],
   bootstrap: [AppComponent]
