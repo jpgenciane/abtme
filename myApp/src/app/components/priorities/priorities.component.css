@@ -97,7 +97,7 @@ mat-tab-group{
 }
 
 .btn{
-    margin-right: 4em;
+    margin-right:4em ;
 }
 
 .active-priority{
@@ -184,7 +184,7 @@ mat-tab-group{
 
 .priority-row2{
     border-radius: 15px;
-    height: 50vh;
+    height: auto;
     display: flex;
     justify-content: center;
   }
@@ -268,7 +268,6 @@ mat-tab-group{
     justify-content: end;
     align-items: start;
     width: 100%;
-   
 }
 
 .edit-button-container{
