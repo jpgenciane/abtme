@@ -17,3 +17,15 @@ export interface Account{
     };
    
 }
+
+export interface Priority{
+    id?:number;
+    userId?:number;
+    priorityName:string;
+    priorityLevel:string;
+    priorityStatus:string;
+    dueDate:string;  
+    priorityDesc:string;
+    color:string; 
+}
+

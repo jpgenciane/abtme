@@ -9,9 +9,11 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
   @Input() data:any;
-  @Output() show=new EventEmitter<boolean>();
+  @Output() show=new EventEmitter<string>();
   showProfile:boolean=false;
+  showPriorities:boolean=false;
   showDashboard:boolean=false;
+  showExpense:boolean=false;
   constructor(private router:Router){}
   routerLinkActive:boolean=false 
   ngOnInit(): void {
@@ -26,7 +28,23 @@ export class NavComponent implements OnInit {
   }
 
   showProfileAction(){
-    this.show.emit(true);
+    this.show.emit("Profile");
     this.showProfile=true;
+    this.showPriorities=false;
+    this.showExpense=false;
+  }
+
+  showPrioritiesAction(){
+    this.show.emit("Priorities");
+    this.showPriorities=true;
+    this.showProfile=false;
+    this.showExpense=false;
+  }
+
+  showExpenseAction(){
+    this.show.emit("Expense");
+    this.showExpense=true;
+    this.showPriorities=false;
+    this.showProfile=false;
   }
 }

@@ -1,7 +1,9 @@
 .container{
-    margin:3em 0 0 0;
+    margin:3em 0 0 0px;
     width: 100%;
-    font-family: 'poppins'
+    font-family: 'poppins';
+  
+    
 }
 .col1-sm{
     width: 60%;
@@ -104,6 +106,8 @@
 
 .work button{
     font-family: 'poppins';
+    margin-left: 3.8em;
+
 }
 
 .work span{

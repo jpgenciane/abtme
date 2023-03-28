@@ -6,13 +6,14 @@
 .sidenav{
 box-shadow: 0 5px 20px rgb(0 0 0 / 0.3);
 height: 98vh;
-width: 94%;
+width: 18%;
 background-color: #29282e;
 padding-top: 20px;
 border-radius:2em 2em 2em 2em;
 margin-top: 1em;
 padding-left: 1em;
 padding-right: 1em;
+position: fixed;
 }
 
 .title{
@@ -34,6 +35,7 @@ padding-right: 1em;
   align-items: center;
   cursor: pointer;
   margin-top: 1em;
+
 }
 
 .logout{
@@ -64,6 +66,7 @@ padding-right: 1em;
   margin-top: 1em;
   background-color: #ea3270 !important;
   border-radius: .8em;
+
 }
 
 .row1{

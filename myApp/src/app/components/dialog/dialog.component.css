@@ -1,0 +1,34 @@
+.container{
+    margin-top:0;
+    width: 100%;
+    padding: 0em 0 2em 0;
+    overflow: hidden;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.priority , .description, .due{
+    width: 90%;
+}
+
+.priority-level, .priority-status{
+    width: 44%;
+}
+
+.priority-level{
+    margin-right: 15px;
+   
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.pick{
+    display: flex;
+}

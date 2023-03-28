@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit,ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbAlertConfig, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-import { interval, timeout, timer } from 'rxjs';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,6 +11,8 @@ export class DashboardComponent implements OnInit {
   username = localStorage.getItem('sessionUsername');
   id = JSON.parse(localStorage.getItem('id') || '{}');
   Profile:Boolean=false;
+  Priorities:Boolean=true;
+  Expense:Boolean=false;
   display:boolean=true;
   constructor(alertConfig: NgbAlertConfig, private router:Router){
     alertConfig.type = 'success';
@@ -45,8 +47,24 @@ startCountdown() {
    
   }, 1000);
 }
-showProfile($event:any){
-  this.Profile=$event;
+action($event:any){
+
+  if($event=="Profile"){
+    this.Profile=true;
+    this.Priorities=false;
+    this.Expense=false;
+  }
+  if($event=="Priorities"){
+    this.Priorities=true;
+    this.Profile=false;
+    this.Expense=false;
+  }
+  if($event=="Expense"){
+    this.Expense=true;
+    this.Priorities=false;
+    this.Profile=false;
+  }
 }
+
  
 }

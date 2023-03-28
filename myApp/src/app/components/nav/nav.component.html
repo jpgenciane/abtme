@@ -19,12 +19,12 @@
                     <span style="color: white">My Account</span>
                 </div>
         
-                <div class="control">
+                <div class="control" [ngClass]="{'controlActive': showExpense}"  (click)="showExpenseAction()">
                     <img [src]="'assets/img/calculator.svg'" style="width: 32px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
                     <span style="color: white">Expense Calculator</span>
                 </div>
         
-                <div class="control">
+                <div class="control" [ngClass]="{'controlActive': showPriorities}"  (click)="showPrioritiesAction()">
                     <img [src]="'assets/img/priority.svg'" style="width: 35px; height: 35px; margin-right: 2em; margin-left: .5em;"  alt="">
                     <span style="color: white">Priorities</span>
                 </div>

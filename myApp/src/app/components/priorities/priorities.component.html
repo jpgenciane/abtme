@@ -1,0 +1,171 @@
+<div class="container">
+    <div class="row">
+      <div class="col1-sm">
+        <div class="priority-row1">
+            <div class="title-header">
+                <h1>Priorities</h1>
+                <span>You must know the difference between what is urgent and what is important. </span> 
+                </div>
+                <div class="button-container">
+                    <button class="btn btn-primary" (click)="openDialog()">Add Priority &nbsp;</button>
+                </div>
+                <div class="priority-container">
+                    <mat-tab-group [disableRipple]="true">
+                        <mat-tab class="my-custom-class" label="Not Started" >
+                            <div class="active-priority"  *ngFor="let item of notStarted" >
+                                <div class="priority-div "  (click)="priorityAction(item)">
+                                  <div class="priority-col1">
+                                    <div class="risk-color" style="background-color: {{item.color}};"></div>
+                                  </div>
+                                  <div class="priority-name-container">
+                                    <div class="priority-name">{{item.priorityName}}</div>
+                                  </div>
+                                  <div class="status-container">
+                                    <div class="status">{{item.priorityStatus}}</div>
+                                  </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="In Progress">
+                            <div class="active-priority"   *ngFor="let item of activePrio" >
+                                <div class="priority-div "  (click)="priorityAction(item)">
+                                  <div class="priority-col1">
+                                    <div class="risk-color" style="background-color: {{item.color}};"></div>
+                                  </div>
+                                  <div class="priority-name-container">
+                                    <div class="priority-name">{{item.priorityName}}</div>
+                                  </div>
+                                  <div class="status-container">
+                                    <div class="status">{{item.priorityStatus}}</div>
+                                  </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+                      </mat-tab-group>
+                </div>
+        </div>
+
+        <div class="row2">
+          <div class="priority-row2">
+            <div class="priority-details-container">
+              <ng-container *ngIf="condition">
+                <img [src]="'assets/img/priority.png'" style="width:75px ; height:50px ; margin-right: 10px;" alt="">
+                  <div class="priorityName-container">
+                  <div class="priorityName">{{showPriority.priorityName}}</div>
+                </div>
+                <div class="priorityLevel-container">
+                  <label for="" style="width: 100%; height: auto; display:flex; align-items: end;">Priority Level</label>
+                  <div class="priorityLevel" >{{showPriority.priorityLevel}}</div>
+                  <div class="priorityColor-container" style="background-color: {{showPriority.color}};">
+                    <div class="priorityColor" ></div>
+                  </div> 
+                </div>
+            
+                <div class="priorityStatus-container">
+                  <div class="form-group priority-status">
+                    <form [formGroup]="formStatus" >
+                        <mat-form-field appearance="fill">
+                            <mat-label>Status- {{showPriority.priorityStatus}}</mat-label>
+                            <mat-select formControlName="priorityStatus" [(ngModel)]="priorityStatus">
+                        <ng-container *ngIf="done">
+                            <mat-option *ngFor="let status of status" [value]="status.value"  >
+                                <div class="pick">
+                                    <div> {{status.viewValue}}</div>
+                                  </div>
+                              </mat-option>
+                        </ng-container>
+                        <ng-container *ngIf="!done">        
+                              <mat-option *ngFor="let statusD of statusDone" [value]="statusD.value"  >
+                                <div class="pick">
+                                    <div> {{statusD.viewValue}}</div>
+                                  </div>
+                              </mat-option>
+                        </ng-container>
+
+                            </mat-select>
+                          </mat-form-field>
+                        <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                            <div *ngIf="submitted && form.controls.username.errors.required">
+                                username is required
+                            </div>
+                        </div> -->
+                    </form>
+                  </div>
+                </div>
+                <div class="priorirtyDueDate-container">
+                  <label for="">Priority Due Date </label>
+                  <div class="priorityDueDate"> {{showPriority.dueDate |  date:'fullDate'}}</div>
+                </div>
+                <div class="priorityDesc-container">
+                  <label for="">Priority Description </label>
+                  <div class="priorityDesc">{{showPriority.priorityDesc}}</div>
+                </div>
+                <div class="buttons">
+                  <div class="edit-button-container">
+                    <button type="button" class="btn btn-primary" style="margin: 0; padding:0; width: 100%; height: 100%;  margin-top: 20px;" (click)="edit()">Edit</button>
+                  </div>
+                  <div class="delete-button-container">
+                    <button type="button" (click)="delete(showPriority)" class="btn btn-danger" style="margin: 0; padding:0; width: 100%; height: 100%; margin-top: 20px;" >Delete</button>
+                  </div>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="!condition">
+             <div class="noData">
+              <img [src]="'assets/img/robt.gif'" style="width: 80%; height: 80% ;" alt="">
+              <h1>Click Priority to see details.</h1>
+             </div>
+            </ng-container>
+            
+          </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="col2-sm">
+        <!-- // col 2 -->
+        
+        <div class="priority1-container">
+            <mat-tab-group class="mat-tab-group1" [disableRipple]="true">
+                <mat-tab class="my-custom-class" label="Done" >
+                    <div class="active-priority"  *ngFor="let item of donePrio" >
+                        <div class="priority-div "  (click)="priorityAction(item)">
+                          <div class="priority-col1">
+                            <div class="risk-color" style="background-color: {{item.color}};"></div>
+                          </div>
+                          <div class="priority-name-container">
+                            <div class="priority-name">{{item.priorityName}}</div>
+                          </div>
+                          <div class="status-container">
+                            <div class="status">{{item.priorityStatus}}</div>
+                          </div>
+                        </div>
+                    </div>
+                </mat-tab>
+              </mat-tab-group>
+        </div>
+        <div class="part-container">
+            <!-- <div class="color-legend">
+                <h1>Color Legend</h1>
+                <div class="legend">
+                    <div class="low"></div>
+                    <div class="normal"></div>
+                    <div class="high"></div>
+                    <div class="critical"></div>
+                </div>
+            </div> -->
+            <div class="color-legend">
+                <h1 style="text-align:center ; font-size: 2.5em;">Color Legend</h1>
+                <div class="legend-description">
+                    <div style="margin-bottom: 10px; color:black; background-color: #b1ea78; border-radius: 15px; text-align: center;" >Low <span style="color:black; font-size:.8em;"></span> </div>
+                    <div style="margin-bottom: 10px; color:black; background-color: #7ddc20; border-radius: 15px; text-align: center;">Normal</div>
+                    <div style="margin-bottom: 10px; color:black ; background-color: #ffa500; border-radius: 15px; text-align: center;">High</div>
+                    <div style="margin-bottom: 10px; color:black ; background-color: #ff2500; border-radius: 15px; text-align: center;">Critical</div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
