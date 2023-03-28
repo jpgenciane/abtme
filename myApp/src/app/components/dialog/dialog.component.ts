@@ -20,6 +20,7 @@ interface Status {
 })
 export class DialogComponent implements OnInit {
   form!:FormGroup;
+  id = JSON.parse(localStorage.getItem('id') || '{}');
   submitted:boolean;
   PriorityName:string;
   priorityLevel:string;
@@ -79,7 +80,8 @@ export class DialogComponent implements OnInit {
       priorityStatus: this.priorityStatus,
       priorityDesc: this.priorityDesc,
       dueDate: this.dueDate,
-      color:this.color
+      color:this.color,
+      userId:this.id
   
 
     }

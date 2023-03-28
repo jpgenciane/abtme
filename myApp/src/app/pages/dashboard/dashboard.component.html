@@ -1,9 +1,9 @@
-<ngb-alert [ngStyle]="{'display': display === false ? 'none' : 'block' }"  style="z-index: 100; margin-left: 23em; position: fixed; width: 80%; margin-top: 2em;" #alert> Welcome @{{username }} </ngb-alert>
+<ngb-alert [ngStyle]="{'display': display === false ? 'none' : 'block' }"  style="z-index: 100; margin-left: 26em; position: fixed; width: 78%; margin-top: 2em;" #alert> Welcome @{{username }} </ngb-alert>
 
 <div class="body" [ngClass]="{'bodyExpense':Expense==true}">
     <div class="nav1"><app-nav [data]="username" (show)="action($event)"></app-nav></div>
     <ng-container *ngIf="Profile"><div class="content-body"><app-myprofile [data]="username" [id]="id" ></app-myprofile></div></ng-container>
-    <ng-container *ngIf="Priorities"><div class="content-body"><app-priorities ></app-priorities></div></ng-container>
+    <ng-container *ngIf="Priorities"><div class="content-body"><app-priorities [id]="id" ></app-priorities></div></ng-container>
     <ng-container *ngIf="Expense"><div class="content-body"><app-myexpense [id]="id" ></app-myexpense></div></ng-container>
 </div>
 

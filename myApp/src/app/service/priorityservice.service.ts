@@ -27,4 +27,10 @@ export class PriorityserviceService {
     const url = `${this.apiUrl}/${priority.id}`;
     return this.http.delete<Priority>(url)
   }
+
+
+  update(priority:Priority,updatedPriority:Priority):Observable<Priority>{
+    const url= `${this.apiUrl}/${priority.id}`;
+    return this.http.put<Priority>(`${this.apiUrl}/${priority.id}`,updatedPriority);
+  }
 }
