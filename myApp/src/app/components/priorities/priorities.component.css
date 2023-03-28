@@ -35,7 +35,7 @@ mat-tab-group{
     border-radius: 15px;
     padding:1em;
     height: 90%;
-    width: 90%;
+    width: 100%;
     background-color: white;
     margin-right: 3em;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.3); 
@@ -193,7 +193,7 @@ mat-tab-group{
     border-radius: 15px;
     padding:1em;
     height: auto;
-    width: 90%;
+    width: 100%;
     background-color: white;
     margin-right: 3em;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.3); 
