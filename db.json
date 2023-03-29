@@ -170,6 +170,58 @@
       "ExpenseUpdateName": "Lacoste",
       "ExpenseUpdateNameDate": "Wed Mar 29 2023 20:22:21 GMT+0800 (Taipei Standard Time)",
       "id": 3
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "Utang",
+      "ExpensePrice": 250,
+      "ExpenseDate": "2023-03-28T16:00:00.000Z",
+      "ExpenseType": "loan",
+      "ExpenseTypeImg": "assets/img/loan.svg",
+      "EpenseCreateName": "Utang",
+      "ExpenseCreateNameDate": "Wed Mar 29 2023 20:25:14 GMT+0800 (Taipei Standard Time)",
+      "ExpenseUpdateName": "Utang",
+      "ExpenseUpdateNameDate": "Wed Mar 29 2023 20:25:14 GMT+0800 (Taipei Standard Time)",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "StarBucks",
+      "ExpensePrice": 210,
+      "ExpenseDate": "2023-03-28T16:00:00.000Z",
+      "ExpenseType": "food",
+      "ExpenseTypeImg": "assets/img/food.svg",
+      "EpenseCreateName": "StarBucks",
+      "ExpenseCreateNameDate": "Wed Mar 29 2023 20:30:06 GMT+0800 (Taipei Standard Time)",
+      "ExpenseUpdateName": "StarBucks",
+      "ExpenseUpdateNameDate": "Wed Mar 29 2023 20:30:06 GMT+0800 (Taipei Standard Time)",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "Bench T-shirt",
+      "ExpensePrice": 500,
+      "ExpenseDate": "2023-03-29T16:00:00.000Z",
+      "ExpenseType": "clothes",
+      "ExpenseTypeImg": "assets/img/clothes.svg",
+      "EpenseCreateName": "Bench T-shirt",
+      "ExpenseCreateNameDate": "Wed Mar 29 2023 20:31:07 GMT+0800 (Taipei Standard Time)",
+      "ExpenseUpdateName": "Bench T-shirt",
+      "ExpenseUpdateNameDate": "Wed Mar 29 2023 20:31:07 GMT+0800 (Taipei Standard Time)",
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "Laptop",
+      "ExpensePrice": 5000,
+      "ExpenseDate": "2023-03-28T16:00:00.000Z",
+      "ExpenseType": "etc",
+      "ExpenseTypeImg": "assets/img/other.svg",
+      "EpenseCreateName": "Laptop",
+      "ExpenseCreateNameDate": "Wed Mar 29 2023 20:31:39 GMT+0800 (Taipei Standard Time)",
+      "ExpenseUpdateName": "Laptop",
+      "ExpenseUpdateNameDate": "Wed Mar 29 2023 20:31:39 GMT+0800 (Taipei Standard Time)",
+      "id": 7
     }
   ]
 }
