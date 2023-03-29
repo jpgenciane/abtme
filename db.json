@@ -157,6 +157,19 @@
       "ExpenseUpdateName": "asdasd",
       "ExpenseUpdateNameDate": "Wed Mar 29 2023 19:20:55 GMT+0800 (Taipei Standard Time)",
       "id": 2
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "Jeep",
+      "ExpensePrice": 12,
+      "ExpenseDate": "2023-03-29T16:00:00.000Z",
+      "ExpenseType": "transportation",
+      "ExpenseTypeImg": "assets/img/transportation.svg",
+      "EpenseCreateName": "Jeep",
+      "ExpenseCreateNameDate": "Wed Mar 29 2023 20:13:05 GMT+0800 (Philippine Standard Time)",
+      "ExpenseUpdateName": "Jeep",
+      "ExpenseUpdateNameDate": "Wed Mar 29 2023 20:13:05 GMT+0800 (Philippine Standard Time)",
+      "id": 3
     }
   ]
 }

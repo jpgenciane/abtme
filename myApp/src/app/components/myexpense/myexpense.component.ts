@@ -15,6 +15,7 @@ export class MyexpenseComponent implements OnInit{
   currentDate = new Date();
   userExpense:Expense[]=[];
   data:Expense[]=[];
+  
   constructor(public dialog: MatDialog,private service:ExpenseServiceService){
    
   }
