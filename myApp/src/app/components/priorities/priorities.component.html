@@ -13,7 +13,7 @@
                     <mat-tab-group [disableRipple]="true">
                         <mat-tab class="my-custom-class" label="Not Started" >
                             <div class="active-priority"  *ngFor="let item of notStarted" >
-                                <div class="priority-div "  (click)="priorityAction(item)">
+                                <div class="priority-div" (click)="priorityAction(item)">
                                   <div class="priority-col1">
                                     <div class="risk-color" style="background-color: {{item.color}};"></div>
                                   </div>
@@ -96,7 +96,7 @@
                   <label for="">Priority Due Date </label>
                   <div class="priorityDueDate"> {{showPriority.dueDate |  date:'fullDate'}}</div>
                 </div>
-                <div class="priorityDesc-container">
+                <div class="priorityDesc-container" style="margin-top: 5px;">
                   <label for="">Priority Description </label>
                   <div class="priorityDesc">{{showPriority.priorityDesc}}</div>
                 </div>

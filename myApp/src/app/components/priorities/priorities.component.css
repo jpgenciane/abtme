@@ -105,7 +105,6 @@ mat-tab-group{
     display: flex;
     margin: 10px 0 10px 0;
     justify-content: center;
-
 }
 
 .priority-div{
@@ -115,6 +114,11 @@ mat-tab-group{
     border-radius: 15px;
     background-color: #cadeef;
     display: flex;
+    cursor: pointer;
+}
+
+.priority-div:hover{
+    background-color: #a2b2bf;
 }
 
 .priority-col1{
@@ -157,12 +161,13 @@ mat-tab-group{
    
 }
 
+
+
 .mat-mdc-tab-body-content::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: #F5F5F5;
-    
+	background-color: #F5F5F5;    
 }
 
 .mat-mdc-tab-body-content::-webkit-scrollbar
@@ -177,6 +182,8 @@ mat-tab-group{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
 }
+
+
 
 .row2{
 

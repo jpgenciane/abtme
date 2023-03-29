@@ -29,3 +29,19 @@ export interface Priority{
     color:string; 
 }
 
+
+export interface Expense{
+    id?:number;
+    userId?:number;
+    ExpenseName:string;
+    ExpensePrice:number;
+    ExpenseDate:string;
+    ExpenseType:string;
+    ExpenseTypeImg:string;
+    EpenseCreateName:string;
+    ExpenseCreateNameDate:string;
+    ExpenseUpdateName:string;
+    ExpenseUpdateNameDate:string;
+}
+
+

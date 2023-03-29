@@ -4,7 +4,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { CommonModule } from '@angular/common'
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
@@ -27,6 +27,7 @@ import { MyprofileComponent } from './components/myprofile/myprofile.component';
 import { PrioritiesComponent } from './components/priorities/priorities.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MyexpenseComponent } from './components/myexpense/myexpense.component';
+import { ExpenseDialogComponent } from './components/expense-dialog/expense-dialog.component';
 
 
 
@@ -44,6 +45,7 @@ import { MyexpenseComponent } from './components/myexpense/myexpense.component';
     PrioritiesComponent,
     DialogComponent,
     MyexpenseComponent,
+    ExpenseDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +63,7 @@ import { MyexpenseComponent } from './components/myexpense/myexpense.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
+    CommonModule,
 
   ],  
   providers: [],

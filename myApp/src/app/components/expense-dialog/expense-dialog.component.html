@@ -1,0 +1,72 @@
+
+<h1 mat-dialog-title>Add Expense</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="form" (ngSubmit)="sendData()"> 
+      
+                <div class="form-group priority">
+                    <label for="exampleInputEmail1">Expense Name</label>
+                    <input type="text" class="form-control" formControlName="expenseName"  name="name" placeholder="Expense Name" [ngClass]="{'is-valid': submitted && form.controls.expenseName.errors }"  [(ngModel)]="expenseName"  >
+                    <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                        <div *ngIf="submitted && form.controls.username.errors.required">
+                            username is required
+                        </div>
+                    </div> -->
+                </div>
+
+            
+                <div class="form-group priority-level">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Expense Type</mat-label>
+                        <mat-select formControlName="priorityLevel" formControlName="expenseType" [(ngModel)]="expenseType">
+                          <mat-option *ngFor="let risk of risk" [value]="risk.value">
+                            <div class="pick">
+                                <div style=" width: 3em; margin-right:5px; border-radius: 15px; display: flex; justify-content: center;"><img  src="{{risk.img}}" style=" width: 65%; height: 100%; margin-right: 10px;" alt=""></div>
+                                {{risk.viewValue}} </div>
+                                
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      
+                    <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                        <div *ngIf="submitted && form.controls.username.errors.required">
+                            username is required
+                        </div>
+                    </div> -->
+                </div>
+
+
+                <div class="form-group due">
+                    <!-- <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Due Date</mat-label>
+                        <input matInput [matDatepicker]="picker" min="{{dateToday() | date:'yyyy-MM-ddTHH:mm:ss.sss'}}" formControlName="dueDate" [(ngModel)]="dueDate">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker">
+                          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field> -->
+                      <mat-form-field appearance="fill">
+                        <mat-label>Expense date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="expenseDate"  [(ngModel)]="expenseDate">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+
+                <div class="form-group priority-status">
+                    <label for="exampleInputEmail1">Expense Price</label>
+                    <input type="number" class="form-control" formControlName="expensePrice"  name="name" placeholder="Expense Price" [ngClass]="{'is-valid': submitted && form.controls.expensePrice.errors }"  [(ngModel)]="expensePrice"  >
+                    <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                        <div *ngIf="submitted && form.controls.username.errors.required">
+                            username is required
+                        </div>
+                    </div> -->
+                </div>
+            
+        
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

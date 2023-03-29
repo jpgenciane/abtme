@@ -9,26 +9,26 @@
 .row{
     width: 100%;
     height: 90vh;
-    border-radius: 3em;
+    border-radius: 2em;
     box-shadow: 0 3px 20px rgb(0 0 0 / 0.3);
 }
 
 .col1-sm{
     width: 70%;
     background-color:#f1f2f6;
-    border-radius: 3em 0em 0em 3em;
+    border-radius: 2em 0em 0em 2em;
 }
 
 
 .col2-sm{
     width: 30%;
     background-color:white;
-    border-radius: 0em 3em 3em 0em;
+    border-radius: 0em 2em 2em 0em;
 }
 
 .myExpenseContainer{
     display: block;
-    padding: 4em 3em 4em 4em;
+    padding: 4em 4em 4em 4em;
 }
 
 .myExpenseContainer .row-one{
@@ -37,12 +37,163 @@
 
 }
 
+.row-one .title-origin{
+    display: flex;
+    width: 60%;
+    align-items: center;
+}
+
+.sub-title{
+    display: flex;
+    width: 40%;
+    justify-content: end;
+}
+
+.row-one .title2{
+    margin-right: 20px;
+}
+.row-one .title3{
+    margin-right: 20px;
+}
+.row-one .title4{
+    margin-right: 0px;
+}
+
+
+
 .myExpenseContainer .row2{
     margin-top: 5em;
     display: flex;
     align-items: center;
-  
-  }
+
+}
+
+
+.myExpenseContainer .row3{
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+
+}
+
+.myExpenseContainer .row4{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.myExpenseContainer .row5{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    
+   
+}
+
+.expense-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45.5vh;
+    overflow: auto;
+    padding:.5em;
+}
+
+
+.expense-container::-webkit-scrollbar{
+    width: 0;
+}
+
+.expense-container .expense{
+    width: 100%;
+    height: 9vh;
+    margin-bottom: 1em;
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+}
+
+.expense-icon-container{
+    width: 10%;
+    margin-left: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.expense-name-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.expense-name-container .expense-name{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.expense-name-container .date-buy{
+    color:#aeb1be;
+    font-size: 1em;
+}
+
+.expense-price-container{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.button-command-container{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: end;
+}
+
+
+
+
+.row-data-container{
+    display: flex;
+}
+
+.myExpenseContainer .row3 .row-data-container{
+
+}
+
+.row-data-container{
+    width: 100%;
+}
+.row-data-container .date-today-container{
+    width: 50%;
+}
+.row-data-container .date-today-container .date-today{
+    font-size: 1.3em;
+}
+.row-data-container .transaction-container{
+
+    width: 30%;
+    display: flex;
+    color: #aeb1be;
+    justify-content: end;
+}
+.row-data-container .value-container{
+
+    width: 20%;
+    display: flex;
+    color: #aeb1be;
+    justify-content: end;
+}
+
 
 .title{
     margin-right: 2em;
@@ -66,7 +217,7 @@
 .col3-cash{
     display: block;
     margin-left: auto;
-    margin-right: 3em;
+ 
 
 }
 

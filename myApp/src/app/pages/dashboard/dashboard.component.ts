@@ -11,8 +11,8 @@ export class DashboardComponent implements OnInit {
   username = localStorage.getItem('sessionUsername');
   id = JSON.parse(localStorage.getItem('id') || '{}');
   Profile:Boolean=false;
-  Priorities:Boolean=true;
-  Expense:Boolean=false;
+  Priorities:Boolean=false;;
+  Expense:Boolean=true;
   display:boolean=true;
   constructor(alertConfig: NgbAlertConfig, private router:Router){
     alertConfig.type = 'success';

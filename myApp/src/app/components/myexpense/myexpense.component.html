@@ -5,11 +5,17 @@
             
             <div class="myExpenseContainer">
                 <div class="row-one">
-                    <img [src]="'assets/img/calculator.svg'" style="width: 44px; height: 45px; margin-right: 1em; margin-left: .5em;"  alt="">
-                    <div class="title" style=" margin-right: 10em; font-weight: bold;"> <span >My Expense Calculator</span></div>
-                    <div class="title"> <span >Overview</span></div>
-                    <div class="title"> <span >Data</span></div>
-                    <div class="title"> <span >Calendar</span></div>
+                    <div class="title-origin">
+                        <img [src]="'assets/img/calculator.svg'" style="width: 44px; height: 45px; margin-right: 1em; margin-left: .5em;"  alt="">
+                        <div class="title1" style="font-weight: bold;"> <span >My Expense Calculator</span></div>
+                    </div>
+                    
+                    <div class="sub-title">
+                        <div class="title2"> <span >Overview</span></div>
+                        <div class="title3"> <span >Data</span></div>
+                        <div class="title4"> <span >Calendar</span></div>
+                    </div>
+    
                 </div>
 
                 <div class="row2">
@@ -27,6 +33,44 @@
                     </div>
                 </div>
 
+                <div class="row3">
+                    <div class="row-data-container">
+                        <div class="date-today-container">
+                            <div class="date-today">{{currentDate |  date:'fullDate'}}</div>
+                        </div>
+                        <div class="transaction-container">
+                            <div class="transactions">Number of Transaction: 4</div>
+                        </div>
+                        <div class="value-container">
+                            <div class="value">Value: P14000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row4">
+                    <div class="add-button">
+                        <button type="button" (click)="addExpense()" class="btn btn-primary">Add Expense</button>
+                    </div>
+                </div>
+                <div class="row5">
+                    <div class="expense-container" > 
+                        <div class="expense" *ngfor="let item of userExpense">
+                            <div class="expense-icon-container">
+                                <div class="expense-icon"><img src="assets\img\clothes.svg" style="width: 80% ; height: 50%;" alt=""></div>
+                            </div>
+                            <div class="expense-name-container">
+                                <div class="expense-name">Coffee</div>
+                                <div class="date-buy">{{currentDate |  date:'fullDate'}}</div>
+                            </div>
+                            <div class="expense-price-container">
+                                <div class="expense-price">-P14000</div>
+                            </div>
+                            <div class="button-command-container">
+                               <div class="edit-button"><img [src]="'assets/img/edit.svg'" style="width: 50% ; height: 50%;background-color:; border-radius: 5px; padding: .5em; margin-left: 4em;" alt=""></div>
+                               <div class="delete-button"><img [src]="'assets/img/delete1.svg'" style="width: 50% ; height: 50%; background-color: ; border-radius: 5px; padding: .5em;" alt=""></div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
             </div>
     
         </div>
