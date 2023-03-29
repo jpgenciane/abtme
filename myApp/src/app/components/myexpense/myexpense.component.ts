@@ -15,7 +15,8 @@ export class MyexpenseComponent implements OnInit{
   currentDate = new Date();
   userExpense:Expense[]=[];
   data:Expense[]=[];
-  
+  totalExpense:number;
+  len:number=0;
   constructor(public dialog: MatDialog,private service:ExpenseServiceService){
    
   }
@@ -32,11 +33,14 @@ export class MyexpenseComponent implements OnInit{
 
   getUserExpense(){
     this.userExpense=[];
+    this.totalExpense=0;
     this.service.getAllExpense().subscribe(res=>{
       this.data=res;
       for(let userEx of res){
         if(this.id==userEx.userId){
           this.userExpense.push(userEx);
+          this.totalExpense+=userEx.ExpensePrice;
+          this.len=this.userExpense.length;
         }else{
 
         }
