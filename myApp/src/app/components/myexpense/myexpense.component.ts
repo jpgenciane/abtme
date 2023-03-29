@@ -35,9 +35,10 @@ export class MyexpenseComponent implements OnInit{
     this.service.getAllExpense().subscribe(res=>{
       this.data=res;
       for(let userEx of res){
-        if(this.id=userEx.userId){
+        if(this.id==userEx.userId){
           this.userExpense.push(userEx);
-          console.log("Number of expense "+this.userExpense.length)
+        }else{
+
         }
       }
     })
