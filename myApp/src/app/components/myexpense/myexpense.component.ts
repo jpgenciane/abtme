@@ -1,8 +1,10 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Expense } from 'src/app/account';
+import { Cash, Expense } from 'src/app/account';
+import { CashServiceService } from 'src/app/service/cash-service.service';
 import { ExpenseServiceService } from 'src/app/service/expense-service.service';
+import { CashDialogComponent } from '../cash-dialog/cash-dialog.component';
 import { ExpenseDialogComponent } from '../expense-dialog/expense-dialog.component';
 
 @Component({
@@ -17,16 +19,29 @@ export class MyexpenseComponent implements OnInit{
   data:Expense[]=[];
   totalExpense:number;
   len:number=0;
-  constructor(public dialog: MatDialog,private service:ExpenseServiceService){
+  userCashActivity:Cash[]=[];
+  lastTransaction:number=0;
+  latestCashData:Cash;
+  homeWallet:number=0;
+  bankWallet:number=0;
+  constructor(public dialog: MatDialog,private service:ExpenseServiceService, private service1:CashServiceService){
    
   }
   ngOnInit(): void {
+    this.getHomeWallet()
     this.getUserExpense();
   }
 
   addExpense(){
     this.dialog.open(ExpenseDialogComponent, {
       width:'40%',
+      height:'auto',
+    });
+  }
+
+  addCash(){
+    this.dialog.open(CashDialogComponent, {
+      width:'20%',
       height:'auto',
     });
   }
@@ -44,6 +59,23 @@ export class MyexpenseComponent implements OnInit{
         }else{
 
         }
+      }
+    })
+  }
+
+  getHomeWallet(){
+    this.homeWallet=0;
+    this.lastTransaction=0;
+    this.userCashActivity=[];
+    this.service1.getAllCash().subscribe(res => {
+
+      for(let user of res){
+        if(this.id == user.userId){
+          this.userCashActivity.push(user);
+        }
+      }
+      for(let userMe of this.userCashActivity){
+        this.lastTransaction+=userMe.homeWallet
       }
     })
   }

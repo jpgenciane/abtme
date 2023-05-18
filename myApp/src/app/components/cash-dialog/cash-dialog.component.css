@@ -1,0 +1,32 @@
+
+.pick{
+    display: flex;
+}
+
+.fields-container{
+    padding-bottom: 2em;
+}
+
+.transaction-type-container{
+    width: 100%;
+}
+
+.transaction-type{
+    width: 100%;
+}
+
+.typeInput{
+    width: 100%;
+}
+
+.button-container{
+    margin-top: 1.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+::ng-deep .mdc-dialog__surface{
+    border-radius: 20px !important;
+    padding:1em;
+  }

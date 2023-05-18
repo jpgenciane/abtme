@@ -1,5 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Cash } from 'src/app/account';
+import { CashServiceService } from 'src/app/service/cash-service.service';
 import { ExpenseServiceService } from 'src/app/service/expense-service.service';
 import { PriorityserviceService } from 'src/app/service/priorityservice.service';
 
@@ -24,10 +26,15 @@ export class ExpenseDialogComponent {
   expenseDate:string;
   today= new Date();
   img:string;
-  
-  constructor(private formBuilder : FormBuilder,private service:ExpenseServiceService, ){}
+  // userCashActivity:Cash[]=[];
+  // lastTransaction:number=0;
+  // latestCashData:Cash;
+  // homeWallet:number=0;
+  // bankWallet:number=0;
+  constructor(private formBuilder : FormBuilder,private service:ExpenseServiceService,private service1:CashServiceService ){}
 
   ngOnInit(): void {
+  
     this.form=this.formBuilder.group({
       expenseName:['',[Validators.required]],
       expenseType:['',[Validators.required]],
@@ -85,5 +92,20 @@ export class ExpenseDialogComponent {
     window.location.reload();
   }
 
+  // getHomeWallet(){
+  //   this.homeWallet=0;
+  //   this.lastTransaction=0;
+  //   this.userCashActivity=[];
+  //   this.service1.getAllCash().subscribe(res => {
+
+  //     for(let user of res){
+  //       if(this.id == user.userId){
+  //         this.userCashActivity.push(user);
+  //       }
+  //     }
+  //     this.lastTransaction=this.userCashActivity.length;
+  //     this.latestCashData=this.userCashActivity[this.lastTransaction-1];
+  //   })
+  // }
 
 }

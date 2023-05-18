@@ -70,7 +70,7 @@
     {
       "priorityName": "Sleeping",
       "priorityLevel": "normal",
-      "priorityStatus": "not started",
+      "priorityStatus": "done",
       "dueDate": "2023-04-28T16:00:00.000Z",
       "priorityDesc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       "color": "#7ddc20",
@@ -221,6 +221,154 @@
       "ExpenseCreateNameDate": "Wed Mar 29 2023 20:31:39 GMT+0800 (Taipei Standard Time)",
       "ExpenseUpdateName": "Laptop",
       "ExpenseUpdateNameDate": "Wed Mar 29 2023 20:31:39 GMT+0800 (Taipei Standard Time)",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "ExpenseName": "Motor",
+      "ExpensePrice": 70000,
+      "ExpenseDate": "2023-04-04T16:00:00.000Z",
+      "ExpenseType": "etc",
+      "ExpenseTypeImg": "assets/img/other.svg",
+      "EpenseCreateName": "Motor",
+      "ExpenseCreateNameDate": "Mon Apr 03 2023 19:13:41 GMT+0800 (Philippine Standard Time)",
+      "ExpenseUpdateName": "Motor",
+      "ExpenseUpdateNameDate": "Mon Apr 03 2023 19:13:41 GMT+0800 (Philippine Standard Time)",
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "test",
+      "ExpensePrice": 1,
+      "ExpenseDate": "2023-04-12T16:00:00.000Z",
+      "ExpenseType": "food",
+      "ExpenseTypeImg": "assets/img/food.svg",
+      "EpenseCreateName": "test",
+      "ExpenseCreateNameDate": "Mon Apr 03 2023 19:15:28 GMT+0800 (Philippine Standard Time)",
+      "ExpenseUpdateName": "test",
+      "ExpenseUpdateNameDate": "Mon Apr 03 2023 19:15:28 GMT+0800 (Philippine Standard Time)",
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "Test Name To be del",
+      "ExpensePrice": 15,
+      "ExpenseDate": "2023-04-03T16:00:00.000Z",
+      "ExpenseType": "clothes",
+      "ExpenseTypeImg": "assets/img/clothes.svg",
+      "EpenseCreateName": "Test Name To be del",
+      "ExpenseCreateNameDate": "Mon Apr 03 2023 19:18:39 GMT+0800 (Philippine Standard Time)",
+      "ExpenseUpdateName": "Test Name To be del",
+      "ExpenseUpdateNameDate": "Mon Apr 03 2023 19:18:39 GMT+0800 (Philippine Standard Time)",
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "John Paul Genciane",
+      "ExpensePrice": 12,
+      "ExpenseDate": "2023-04-12T16:00:00.000Z",
+      "ExpenseType": "clothes",
+      "ExpenseTypeImg": "assets/img/clothes.svg",
+      "EpenseCreateName": "John Paul Genciane",
+      "ExpenseCreateNameDate": "Mon Apr 03 2023 19:19:13 GMT+0800 (Philippine Standard Time)",
+      "ExpenseUpdateName": "John Paul Genciane",
+      "ExpenseUpdateNameDate": "Mon Apr 03 2023 19:19:13 GMT+0800 (Philippine Standard Time)",
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "ExpenseName": "CAndy",
+      "ExpensePrice": 1,
+      "ExpenseDate": "2023-04-05T16:00:00.000Z",
+      "ExpenseType": "food",
+      "ExpenseTypeImg": "assets/img/food.svg",
+      "EpenseCreateName": "CAndy",
+      "ExpenseCreateNameDate": "Thu Apr 06 2023 09:25:18 GMT+0800 (Philippine Standard Time)",
+      "ExpenseUpdateName": "CAndy",
+      "ExpenseUpdateNameDate": "Thu Apr 06 2023 09:25:18 GMT+0800 (Philippine Standard Time)",
+      "id": 12
+    }
+  ],
+  "cash": [
+    {
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "transactionType": "home",
+      "depositAmount": 1000,
+      "homeWallet": 1000,
+      "bankWallet": 0,
+      "transactionTypeImg": "assets/img/food.svg",
+      "transactionCreateName": "transaction function toString() { [native code] }",
+      "transactionCreateNameDate": "Thu Mar 30 2023 13:17:15 GMT+0800 (Philippine Standard Time)",
+      "transactionUpdateName": "transaction function toString() { [native code] }",
+      "transactionUpdateNameDate": "Thu Mar 30 2023 13:17:15 GMT+0800 (Philippine Standard Time)",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "transactionType": "home",
+      "depositAmount": 20,
+      "homeWallet": 20,
+      "bankWallet": 0,
+      "transactionTypeImg": "assets/img/food.svg",
+      "transactionCreateName": "transaction function toString() { [native code] }",
+      "transactionCreateNameDate": "Thu Mar 30 2023 13:19:36 GMT+0800 (Philippine Standard Time)",
+      "transactionUpdateName": "transaction function toString() { [native code] }",
+      "transactionUpdateNameDate": "Thu Mar 30 2023 13:19:36 GMT+0800 (Philippine Standard Time)",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "transactionType": "home",
+      "depositAmount": 20,
+      "homeWallet": 20,
+      "bankWallet": 0,
+      "transactionTypeImg": "assets/img/food.svg",
+      "transactionCreateName": "transaction 2",
+      "transactionCreateNameDate": "Thu Mar 30 2023 13:21:47 GMT+0800 (Philippine Standard Time)",
+      "transactionUpdateName": "transaction 2",
+      "transactionUpdateNameDate": "Thu Mar 30 2023 13:21:47 GMT+0800 (Philippine Standard Time)",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "transactionType": "home",
+      "depositAmount": 10,
+      "homeWallet": 10,
+      "bankWallet": 0,
+      "transactionTypeImg": "assets/img/food.svg",
+      "transactionCreateName": "transaction id: 2",
+      "transactionCreateNameDate": "Thu Mar 30 2023 13:22:23 GMT+0800 (Philippine Standard Time)",
+      "transactionUpdateName": "transaction id: 2",
+      "transactionUpdateNameDate": "Thu Mar 30 2023 13:22:23 GMT+0800 (Philippine Standard Time)",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "transactionType": "home",
+      "depositAmount": 12,
+      "homeWallet": 12,
+      "bankWallet": 0,
+      "transactionTypeImg": "assets/img/food.svg",
+      "transactionCreateName": "transaction id: 2",
+      "transactionCreateNameDate": "Thu Apr 06 2023 09:24:53 GMT+0800 (Philippine Standard Time)",
+      "transactionUpdateName": "transaction id: 2",
+      "transactionUpdateNameDate": "Thu Apr 06 2023 09:24:53 GMT+0800 (Philippine Standard Time)",
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "transactionType": "home",
+      "depositAmount": 1,
+      "homeWallet": 1,
+      "bankWallet": 0,
+      "transactionTypeImg": "assets/img/food.svg",
+      "transactionCreateName": "transaction id: 2",
+      "transactionCreateNameDate": "Tue Apr 18 2023 13:27:52 GMT+0800 (Philippine Standard Time)",
+      "transactionUpdateName": "transaction id: 2",
+      "transactionUpdateNameDate": "Tue Apr 18 2023 13:27:52 GMT+0800 (Philippine Standard Time)",
       "id": 7
     }
   ]

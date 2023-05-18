@@ -28,6 +28,7 @@ import { PrioritiesComponent } from './components/priorities/priorities.componen
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MyexpenseComponent } from './components/myexpense/myexpense.component';
 import { ExpenseDialogComponent } from './components/expense-dialog/expense-dialog.component';
+import { CashDialogComponent } from './components/cash-dialog/cash-dialog.component';
 
 
 
@@ -46,6 +47,7 @@ import { ExpenseDialogComponent } from './components/expense-dialog/expense-dial
     DialogComponent,
     MyexpenseComponent,
     ExpenseDialogComponent,
+    CashDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="row2">
-                    <div class="col1-img">
+                    <div class="col1-img" (click)="addCash()">
                         <img [src]="'assets/img/wallet.png'" style="width: 60px; height: 55px; margin-right: 1em; margin-left: .5em;"  alt="">
                     </div>
                     
@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="col3-cash"> 
-                        <div style="font-size: 2em;">&#x20B1; 1000</div>
+                        <div style="font-size: 2em;">&#x20B1; {{lastTransaction| number}}</div>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
                             <div class="transactions">Number of Transaction: {{len}}</div>
                         </div>
                         <div class="value-container">
-                            <div class="value">TotalExpense &#x20B1;{{totalExpense}}</div>
+                            <div class="value">TotalExpense &#x20B1;{{totalExpense | number}}</div>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                                     <div class="date-buy">{{item.ExpenseDate| date:'fullDate'}}</div>
                                 </div>
                                 <div class="expense-price-container">
-                                    <div class="expense-price">-&#x20B1;{{item.ExpensePrice}}</div>
+                                    <div class="expense-price">-&#x20B1;{{item.ExpensePrice | number}}</div>
                                 </div>
                                 <div class="button-command-container">
                                    <div class="edit-button"><img [src]="'assets/img/edit.svg'" style="width: 50% ; height: 50%;background-color:; border-radius: 5px; padding: .5em; margin-left: 4em;" alt=""></div>

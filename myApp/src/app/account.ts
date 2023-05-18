@@ -44,4 +44,20 @@ export interface Expense{
     ExpenseUpdateNameDate:string;
 }
 
+export interface Cash{
+    id?:number;
+    userId?:number;
+    depositAmount:number;
+    homeWallet:number;
+    bankWallet:number;
+    transactionType:string;
+    transactionTypeImg:string;
+    transactionCreateName:string;
+    transactionCreateNameDate:string;
+    transactionUpdateName:string;
+    transactionUpdateNameDate:string;
+}
+
+
+
 

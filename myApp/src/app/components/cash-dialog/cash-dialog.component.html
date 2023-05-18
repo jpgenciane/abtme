@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>Add Cash</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="fields-container">
+                <form [formGroup]="form" (ngSubmit)="deposit()">
+                    <div class="transaction-type-container">
+                        <div class="transaction-type">
+                           <mat-form-field class="typeInput" appearance="fill">
+                            <mat-label>Transaction Type</mat-label>
+                            <mat-select formControlName="priorityLevel" formControlName="transactionType" [(ngModel)]="transactionType">
+                              <mat-option *ngFor="let risk of transaction" [value]="risk.value">
+                                <div class="pick">
+                                    <div style=" width: 3em; margin-right:5px; border-radius: 15px; display: flex; justify-content: center;">
+                                        <img  src="{{risk.img}}" style=" width: 65%; height: 100%; margin-right: 10px;" alt="">
+                                    </div>
+                                    {{risk.viewValue}} 
+                                </div>
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          
+                        <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                            <div *ngIf="submitted && form.controls.username.errors.required">
+                                username is required
+                            </div>
+                        </div> -->
+                        </div> 
+                    </div>
+    
+                    <div class="deposit-amount-container">
+                        <div class="deposit-amount">
+                            <label for="exampleInputEmail1">Deposit Amount</label>
+                            <input type="number" class="form-control" formControlName="depositAmount"  name="name" placeholder="depositAmount" [ngClass]="{'is-valid': submitted && form.controls.depositAmount.errors }"  [(ngModel)]="depositAmount"  >
+                            <!-- <div *ngIf="submitted && form.controls.username.errors" class="text-danger">
+                                 <div *ngIf="submitted && form.controls.username.errors.required">
+                                username is required
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+    
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-primary" style="width:100% ;">Submit </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
